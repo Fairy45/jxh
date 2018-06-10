@@ -1,0 +1,14 @@
+kaifang_file_path = 'D:\\Desktop\\kaifangX.txt'
+email_file_path='D:\\Desktop\\email.txt'
+kaifang_file=open(kaifang_file_path,'r',encoding='utf-8',errors='ignore') 
+email_file=open(email_file_path,'a',encoding='utf-8',errors='ignore')
+for i in range(10000):
+        try:
+            email=kaifang_file.readline().split(',')[-2]
+            email_file.write(email)
+        except Exception as e:
+            print(e)
+            print('未获取到数据')
+kaifang_file.close()
+email_file.close()
+    
