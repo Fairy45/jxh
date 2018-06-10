@@ -1,0 +1,11 @@
+def url():
+    url=['http://www.17k.com/book/2811825.html','http://www.17k.com/book/2801193.html']
+    file_path='D:\\Desktop\\jxh.txt'
+    header={'User-Agent':' Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36'}
+    import requests
+    response=requests.get('http://www.17k.com/')
+    with open(file_path,'a',encoding='utf-8') as f:
+        for i in range(2):
+            b = requests.get(url[i],headers=header)
+            f.write(b.text)
+    print(i)
