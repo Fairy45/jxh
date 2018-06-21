@@ -1,0 +1,15 @@
+1£¬import re
+content = 'Hello 1234567 hahah 123 lalal 456'
+res = re.match('^Hello\s\d{3}\.*(\d+)\.*\d{3}',content)
+print(res.group(1))---4
+
+2£¬import re
+content = 'Hello 1234567 hahah 123 lalal 456'
+res = re.match('^Hello\s\d{4}\.*(\d+)\.*\d{2}',content)
+print(res.group(1))---5
+
+3£¬import re
+content = 'Hello 1234567 hahah 123 lalal 456'
+res = re.match('^Hello\s\d{7}\s\w{5}\s(\d{3})',content)
+print(res.group(1))---123
+
